@@ -4,13 +4,16 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import { RentalProvider } from './context/RentalContext'
+import { ThemeProvider } from './context/ThemeContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <RentalProvider>
-        <App />
-      </RentalProvider>
+      <ThemeProvider>
+        <RentalProvider>
+          <App />
+        </RentalProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )
