@@ -1,8 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import API_BASE from '../api';
 
 const RentalContext = createContext();
-
-const API_BASE = 'http://localhost:5000';
 
 export const RentalProvider = ({ children }) => {
   const [user, setUser] = useState(null);
